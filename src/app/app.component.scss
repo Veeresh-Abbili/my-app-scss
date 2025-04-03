@@ -1,0 +1,42 @@
+@import './variables.scss';
+@import  './mixins.scss';
+
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+    display: flex;
+
+    .left{
+        width: 20%;
+        height: 100%;
+        background-color: darkorange;
+    
+        h1{
+            background-color: hotpink;
+        }
+    }
+    .right{
+        width: 80%;
+        height: 100%;
+        background-color: rgb(136, 192, 136);
+
+        .blue{
+            @include button-structure();
+            background-color:$firstcolor;
+        }
+           .yellow{
+            @include button-structure();
+            background-color:$secondcolor;
+        }
+           .red{
+            @include button-structure();
+            background-color:$thirdcolor;
+        }
+        .blue-round{
+            @extend .blue;
+            border-radius: 50%;
+        }
+    }
+       
+}
